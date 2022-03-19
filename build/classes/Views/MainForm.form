@@ -36,11 +36,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="ATURAN"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuAturanActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuKeputusan">
               <Properties>
                 <Property name="text" type="java.lang.String" value="KEPUTUSAN"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuKeputusanActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

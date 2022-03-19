@@ -73,9 +73,19 @@ public class MainForm extends javax.swing.JFrame {
         jMenu2.setText("PROSES");
 
         menuAturan.setText("ATURAN");
+        menuAturan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAturanActionPerformed(evt);
+            }
+        });
         jMenu2.add(menuAturan);
 
         menuKeputusan.setText("KEPUTUSAN");
+        menuKeputusan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuKeputusanActionPerformed(evt);
+            }
+        });
         jMenu2.add(menuKeputusan);
 
         jMenuBar1.add(jMenu2);
@@ -123,6 +133,16 @@ public class MainForm extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_jMenu4MouseClicked
+
+    private void menuAturanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAturanActionPerformed
+        // TODO add your handling code here:
+        new FormAturan().show();
+    }//GEN-LAST:event_menuAturanActionPerformed
+
+    private void menuKeputusanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuKeputusanActionPerformed
+        // TODO add your handling code here:
+        new FormKeputusan().show();
+    }//GEN-LAST:event_menuKeputusanActionPerformed
 
     /**
      * @param args the command line arguments

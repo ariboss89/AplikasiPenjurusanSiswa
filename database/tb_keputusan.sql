@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 09:35:50.1340
+-- Generation Time: 2022-03-19 12:13:52.8240
 -- -------------------------------------------------------------
 
 
@@ -19,15 +19,15 @@
 
 
 CREATE TABLE `tb_keputusan` (
-  `id_keputusan` varchar(255) NOT NULL,
-  `id_siswa` varchar(255) DEFAULT NULL,
-  `nama_siswa` varchar(255) DEFAULT NULL,
-  `minat` varchar(255) DEFAULT NULL,
-  `jurusan` varchar(255) DEFAULT NULL,
+  `id_keputusan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_siswa` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nama_siswa` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `minat` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `jurusan` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `id` int NOT NULL AUTO_INCREMENT,
   `tanggal` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tb_keputusan` (`id_keputusan`, `id_siswa`, `nama_siswa`, `minat`, `jurusan`, `id`, `tanggal`) VALUES
 ('K-0001', 'S-00001', 'Aldo Mininda', 'IPA', 'IPA', 21, '2022-03-16'),
@@ -49,7 +49,17 @@ INSERT INTO `tb_keputusan` (`id_keputusan`, `id_siswa`, `nama_siswa`, `minat`, `
 ('K-0002', 'S-00007', 'Gina Rahmawati', 'IPA', 'IPA', 37, '2022-03-17'),
 ('K-0002', 'S-00008', 'Indra Setiawan', 'IPA', 'IPS', 38, '2022-03-17'),
 ('K-0002', 'S-00009', 'Joko Sutrisno', 'IPA', 'IPA', 39, '2022-03-17'),
-('K-0002', 'S-00010', 'M. Fathurrayan', 'IPA', 'IPA', 40, '2022-03-17');
+('K-0002', 'S-00010', 'M. Fathurrayan', 'IPA', 'IPA', 40, '2022-03-17'),
+('K-0003', 'S-00001', 'Aldo Mininda', 'IPA', 'IPA', 41, '2022-03-19'),
+('K-0003', 'S-00002', 'Adhy Yuri', 'IPS', 'IPS', 42, '2022-03-19'),
+('K-0003', 'S-00003', 'Bambang Sukojo', 'IPS', 'IPS', 43, '2022-03-19'),
+('K-0003', 'S-00004', 'Chandra', 'IPS', 'IPS', 44, '2022-03-19'),
+('K-0003', 'S-00005', 'Derwin', 'IPS', 'IPS', 45, '2022-03-19'),
+('K-0003', 'S-00006', 'Feranika Hutama', 'IPA', 'IPA', 46, '2022-03-19'),
+('K-0003', 'S-00007', 'Gina Rahmawati', 'IPA', 'IPA', 47, '2022-03-19'),
+('K-0003', 'S-00008', 'Indra Setiawan', 'IPA', 'IPS', 48, '2022-03-19'),
+('K-0003', 'S-00009', 'Joko Sutrisno', 'IPA', 'IPA', 49, '2022-03-19'),
+('K-0003', 'S-00010', 'M. Fathurrayan', 'IPA', 'IPA', 50, '2022-03-19');
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

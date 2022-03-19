@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 09:36:26.0840
+-- Generation Time: 2022-03-19 12:14:27.3180
 -- -------------------------------------------------------------
 
 
@@ -19,11 +19,11 @@
 
 
 CREATE TABLE `tb_rules` (
-  `id_rules` varchar(255) NOT NULL,
-  `rules` varchar(255) DEFAULT NULL,
-  `jurusan` varchar(255) DEFAULT NULL,
+  `id_rules` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `rules` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `jurusan` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_rules`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tb_rules` (`id_rules`, `rules`, `jurusan`) VALUES
 ('R-001', 'IPAA', 'IPA'),

@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 09:36:16.8270
+-- Generation Time: 2022-03-19 12:14:13.2420
 -- -------------------------------------------------------------
 
 
@@ -20,14 +20,14 @@
 
 CREATE TABLE `tb_minat` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama_siswa` varchar(255) DEFAULT NULL,
-  `atribut` varchar(255) DEFAULT NULL,
+  `nama_siswa` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `atribut` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nilai_angka` int DEFAULT NULL,
-  `nilai_huruf` varchar(255) DEFAULT NULL,
-  `minat` varchar(255) DEFAULT NULL,
-  `id_siswa` varchar(255) DEFAULT NULL,
+  `nilai_huruf` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `minat` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id_siswa` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tb_minat` (`id`, `nama_siswa`, `atribut`, `nilai_angka`, `nilai_huruf`, `minat`, `id_siswa`) VALUES
 (2, 'Aldo Mininda', 'IPA', 75, 'IPAB', 'IPA', 'S-00001'),

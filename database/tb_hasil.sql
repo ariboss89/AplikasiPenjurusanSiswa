@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 09:35:27.3610
+-- Generation Time: 2022-03-19 12:13:09.3330
 -- -------------------------------------------------------------
 
 
@@ -20,14 +20,14 @@
 
 CREATE TABLE `tb_hasil` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama` varchar(255) DEFAULT NULL,
+  `nama` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nilai_angka` int DEFAULT NULL,
-  `nilai_huruf` varchar(255) DEFAULT NULL,
-  `minat` varchar(255) DEFAULT NULL,
-  `hasil` varchar(255) DEFAULT NULL,
-  `atribut` varchar(255) DEFAULT NULL,
+  `nilai_huruf` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `minat` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `hasil` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `atribut` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

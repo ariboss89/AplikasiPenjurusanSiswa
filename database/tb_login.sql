@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 12:13:26.8730
+-- Generation Time: 2022-03-19 12:14:01.8980
 -- -------------------------------------------------------------
 
 
@@ -18,15 +18,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-CREATE TABLE `tb_idkeputusan` (
-  `id_keputusan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id_keputusan`)
+CREATE TABLE `tb_login` (
+  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `role` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `tb_idkeputusan` (`id_keputusan`) VALUES
-('K-0001'),
-('K-0002'),
-('K-0003');
+INSERT INTO `tb_login` (`username`, `password`, `role`) VALUES
+('ariboss89', '123456', 'SUPERADMIN');
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

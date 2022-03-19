@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: db_siswa
--- Generation Time: 2022-03-19 09:36:34.1800
+-- Generation Time: 2022-03-19 12:14:44.4640
 -- -------------------------------------------------------------
 
 
@@ -19,13 +19,13 @@
 
 
 CREATE TABLE `tb_siswa` (
-  `id` varchar(255) NOT NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `alamat` varchar(255) DEFAULT NULL,
-  `kontak` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `minat` varchar(255) DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `kontak` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `minat` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tb_siswa` (`id`, `nama`, `alamat`, `kontak`, `minat`) VALUES
 ('S-00001', 'Aldo Mininda', 'Gudang Minyak', '081267654232', 'IPA'),

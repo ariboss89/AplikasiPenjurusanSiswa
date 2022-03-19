@@ -94,7 +94,6 @@ public class MinatForm extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtHuruf = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
