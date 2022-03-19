@@ -1,0 +1,217 @@
+-- MySQL dump 10.13  Distrib 8.0.27, for macos11 (x86_64)
+--
+-- Host: 127.0.01    Database: db_siswa
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tb_hasil`
+--
+
+DROP TABLE IF EXISTS `tb_hasil`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_hasil` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) DEFAULT NULL,
+  `nilai_angka` int DEFAULT NULL,
+  `nilai_huruf` varchar(255) DEFAULT NULL,
+  `minat` varchar(255) DEFAULT NULL,
+  `hasil` varchar(255) DEFAULT NULL,
+  `atribut` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_hasil`
+--
+
+LOCK TABLES `tb_hasil` WRITE;
+/*!40000 ALTER TABLE `tb_hasil` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_hasil` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_idkeputusan`
+--
+
+DROP TABLE IF EXISTS `tb_idkeputusan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_idkeputusan` (
+  `id_keputusan` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_keputusan`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_idkeputusan`
+--
+
+LOCK TABLES `tb_idkeputusan` WRITE;
+/*!40000 ALTER TABLE `tb_idkeputusan` DISABLE KEYS */;
+INSERT INTO `tb_idkeputusan` VALUES ('K-0001'),('K-0002');
+/*!40000 ALTER TABLE `tb_idkeputusan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_keputusan`
+--
+
+DROP TABLE IF EXISTS `tb_keputusan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_keputusan` (
+  `id_keputusan` varchar(255) NOT NULL,
+  `id_siswa` varchar(255) DEFAULT NULL,
+  `nama_siswa` varchar(255) DEFAULT NULL,
+  `minat` varchar(255) DEFAULT NULL,
+  `jurusan` varchar(255) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_keputusan`
+--
+
+LOCK TABLES `tb_keputusan` WRITE;
+/*!40000 ALTER TABLE `tb_keputusan` DISABLE KEYS */;
+INSERT INTO `tb_keputusan` VALUES ('K-0001','S-00001','Aldo Mininda','IPA','IPA',21,'2022-03-16'),('K-0001','S-00002','Adhy Yuri','IPS','IPS',22,'2022-03-16'),('K-0001','S-00003','Bambang Sukojo','IPS','IPS',23,'2022-03-16'),('K-0001','S-00004','Chandra','IPS','IPS',24,'2022-03-16'),('K-0001','S-00005','Derwin','IPS','IPS',25,'2022-03-16'),('K-0001','S-00006','Feranika Hutama','IPA','IPA',26,'2022-03-16'),('K-0001','S-00007','Gina Rahmawati','IPA','IPA',27,'2022-03-16'),('K-0001','S-00008','Indra Setiawan','IPA','IPS',28,'2022-03-16'),('K-0001','S-00009','Joko Sutrisno','IPA','IPA',29,'2022-03-16'),('K-0001','S-00010','M. Fathurrayan','IPA','IPA',30,'2022-03-16'),('K-0002','S-00001','Aldo Mininda','IPA','IPA',31,'2022-03-17'),('K-0002','S-00002','Adhy Yuri','IPS','IPS',32,'2022-03-17'),('K-0002','S-00003','Bambang Sukojo','IPS','IPS',33,'2022-03-17'),('K-0002','S-00004','Chandra','IPS','IPS',34,'2022-03-17'),('K-0002','S-00005','Derwin','IPS','IPS',35,'2022-03-17'),('K-0002','S-00006','Feranika Hutama','IPA','IPA',36,'2022-03-17'),('K-0002','S-00007','Gina Rahmawati','IPA','IPA',37,'2022-03-17'),('K-0002','S-00008','Indra Setiawan','IPA','IPS',38,'2022-03-17'),('K-0002','S-00009','Joko Sutrisno','IPA','IPA',39,'2022-03-17'),('K-0002','S-00010','M. Fathurrayan','IPA','IPA',40,'2022-03-17');
+/*!40000 ALTER TABLE `tb_keputusan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_login`
+--
+
+DROP TABLE IF EXISTS `tb_login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_login` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_login`
+--
+
+LOCK TABLES `tb_login` WRITE;
+/*!40000 ALTER TABLE `tb_login` DISABLE KEYS */;
+INSERT INTO `tb_login` VALUES ('ariboss89','123456','SUPERADMIN');
+/*!40000 ALTER TABLE `tb_login` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_minat`
+--
+
+DROP TABLE IF EXISTS `tb_minat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_minat` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_siswa` varchar(255) DEFAULT NULL,
+  `atribut` varchar(255) DEFAULT NULL,
+  `nilai_angka` int DEFAULT NULL,
+  `nilai_huruf` varchar(255) DEFAULT NULL,
+  `minat` varchar(255) DEFAULT NULL,
+  `id_siswa` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_minat`
+--
+
+LOCK TABLES `tb_minat` WRITE;
+/*!40000 ALTER TABLE `tb_minat` DISABLE KEYS */;
+INSERT INTO `tb_minat` VALUES (2,'Aldo Mininda','IPA',75,'IPAB','IPA','S-00001'),(3,'Aldo Mininda','IPS',70,'IPSC','IPA','S-00001'),(4,'Aldo Mininda','MTK',80,'MTKB','IPA','S-00001'),(5,'Adhy Yuri','IPA',85,'IPAB','IPS','S-00002'),(6,'Adhy Yuri','IPS',85,'IPSB','IPS','S-00002'),(7,'Adhy Yuri','MTK',85,'MTKB','IPS','S-00002'),(8,'Bambang Sukojo','IPA',80,'IPAB','IPS','S-00003'),(9,'Bambang Sukojo','IPS',90,'IPSA','IPS','S-00003'),(10,'Bambang Sukojo','MTK',90,'MTKA','IPS','S-00003'),(11,'Chandra','IPA',73,'IPAB','IPS','S-00004'),(12,'Chandra','IPS',75,'IPSB','IPS','S-00004'),(13,'Chandra','MTK',76,'MTKB','IPS','S-00004'),(14,'Derwin','IPA',80,'IPAB','IPS','S-00005'),(15,'Derwin','IPS',88,'IPSA','IPS','S-00005'),(16,'Derwin','MTK',75,'MTKB','IPS','S-00005'),(17,'Feranika Hutama','IPA',90,'IPAA','IPA','S-00006'),(18,'Feranika Hutama','IPS',88,'IPSA','IPA','S-00006'),(19,'Feranika Hutama','MTK',86,'MTKA','IPA','S-00006'),(20,'Gina Rahmawati','IPA',86,'IPAA','IPA','S-00007'),(21,'Gina Rahmawati','IPS',85,'IPSB','IPA','S-00007'),(22,'Gina Rahmawati','MTK',84,'MTKB','IPA','S-00007'),(23,'Indra Setiawan','IPA',79,'IPAB','IPA','S-00008'),(24,'Indra Setiawan','IPS',84,'IPSB','IPA','S-00008'),(25,'Indra Setiawan','MTK',83,'MTKB','IPA','S-00008'),(26,'Joko Sutrisno','IPA',88,'IPAA','IPA','S-00009'),(27,'Joko Sutrisno','IPS',86,'IPSA','IPA','S-00009'),(28,'Joko Sutrisno','MTK',84,'MTKB','IPA','S-00009'),(29,'M. Fathurrayan','IPA',90,'IPAA','IPA','S-00010'),(30,'M. Fathurrayan','IPS',87,'IPSA','IPA','S-00010'),(31,'M. Fathurrayan','MTK',85,'MTKB','IPA','S-00010');
+/*!40000 ALTER TABLE `tb_minat` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_rules`
+--
+
+DROP TABLE IF EXISTS `tb_rules`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_rules` (
+  `id_rules` varchar(255) NOT NULL,
+  `rules` varchar(255) DEFAULT NULL,
+  `jurusan` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_rules`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_rules`
+--
+
+LOCK TABLES `tb_rules` WRITE;
+/*!40000 ALTER TABLE `tb_rules` DISABLE KEYS */;
+INSERT INTO `tb_rules` VALUES ('R-001','IPAA','IPA'),('R-002','IPAC','IPS'),('R-003','IPAB,IPSA','IPS'),('R-004','IPAB,IPSC','IPA'),('R-005','IPAB,IPSB,MTKA','IPA'),('R-006','IPAB,IPSB,MTKB','IPS'),('R-007','IPAB,IPSB,MTKC','IPS');
+/*!40000 ALTER TABLE `tb_rules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_siswa`
+--
+
+DROP TABLE IF EXISTS `tb_siswa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_siswa` (
+  `id` varchar(255) NOT NULL,
+  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `alamat` varchar(255) DEFAULT NULL,
+  `kontak` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `minat` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_siswa`
+--
+
+LOCK TABLES `tb_siswa` WRITE;
+/*!40000 ALTER TABLE `tb_siswa` DISABLE KEYS */;
+INSERT INTO `tb_siswa` VALUES ('S-00001','Aldo Mininda','Gudang Minyak','081267654232','IPA'),('S-00002','Adhy Yuri','Pantai Indah','086513456677','IPS'),('S-00003','Bambang Sukojo','Pramuka','08978776543','IPS'),('S-00004','Chandra','Batu 3','0918291','IPS'),('S-00005','Derwin','Batu 5','09989','IPS'),('S-00006','Feranika Hutama','Batu 10','87361819','IPA'),('S-00007','Gina Rahmawati','Batu 8 Atas','89738101','IPA'),('S-00008','Indra Setiawan','Dompak','787191','IPA'),('S-00009','Joko Sutrisno','Alif Stone ','6782911','IPA'),('S-00010','M. Fathurrayan','Ranai Kota','7682100111','IPA');
+/*!40000 ALTER TABLE `tb_siswa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'db_siswa'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-03-19  9:27:40
