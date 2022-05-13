@@ -6,6 +6,7 @@
 package Interface;
 
 import Models.ipa;
+import Models.tb_rules;
 import java.util.ArrayList;
 
 /**
@@ -18,4 +19,5 @@ public interface IAturanService {
     int TotalKasus(String minat);
     int CountKasus(String atribut1, String atribut2, String minat);
     int CountKasus3(String atribut1, String atribut2, String atribut3, String minat);
+    void DeleteRules(String idRules);
 }

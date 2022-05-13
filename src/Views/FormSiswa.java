@@ -11,6 +11,7 @@ import Service.TableServiceImpl;
 import javax.swing.JOptionPane;
 import Interface.ITableService;
 import Interface.ISiswaService;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -94,11 +95,23 @@ public class FormSiswa extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel1.setText("NAMA");
 
+        txtNama.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNamaKeyTyped(evt);
+            }
+        });
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setText("ALAMAT");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel3.setText("KONTAK");
+
+        txtKontak.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtKontakKeyTyped(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel4.setText("MINAT");
@@ -396,6 +409,26 @@ public class FormSiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         Refresh();
     }//GEN-LAST:event_btnDelete1ActionPerformed
+
+    private void txtKontakKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtKontakKeyTyped
+        // TODO add your handling code here:
+        char karakter = evt.getKeyChar();
+
+        if (!(((karakter >= '0') && (karakter <= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE) || (karakter == KeyEvent.VK_ENTER)))) {
+            getToolkit().beep();
+            evt.consume();
+        } 
+    }//GEN-LAST:event_txtKontakKeyTyped
+
+    private void txtNamaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNamaKeyTyped
+        // TODO add your handling code here:
+        char karakter = evt.getKeyChar();
+
+        if ((((karakter >= '0') && (karakter <= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE) || (karakter == KeyEvent.VK_ENTER)))) {
+            getToolkit().beep();
+            evt.consume();
+        } 
+    }//GEN-LAST:event_txtNamaKeyTyped
 
     /**
      * @param args the command line arguments

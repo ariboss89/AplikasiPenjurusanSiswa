@@ -12,6 +12,7 @@ import java.sql.Statement;
 import Interface.IAturanService;
 import Models.ipa;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -163,4 +164,22 @@ public class AturanServiceImpl implements IAturanService{
         return count;
     
     }
+
+    @Override
+    public void DeleteRules(String idRules) {
+        con = new Koneksi();
+        con.connect();
+        try {
+            st = con.conn.createStatement();
+            query = "delete from tb_rules where id_rules = '" + idRules + "'";
+            st.executeUpdate(query);
+            st.close();
+            con.conn.close();
+            JOptionPane.showMessageDialog(null, "Data di Hapus");
+        } catch (SQLException e) {
+
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }    
 }
+

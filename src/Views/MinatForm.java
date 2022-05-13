@@ -14,6 +14,7 @@ import Service.AturanServiceImpl;
 import Service.HasilServiceImpl;
 import Service.MinatServiceImpl;
 import Service.TableServiceImpl;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -108,6 +109,9 @@ public class MinatForm extends javax.swing.JFrame {
         txtNama.setEditable(false);
 
         txtNilai.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNilaiKeyTyped(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNilaiKeyReleased(evt);
             }
@@ -266,7 +270,7 @@ public class MinatForm extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -311,7 +315,7 @@ public class MinatForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -442,6 +446,16 @@ public class MinatForm extends javax.swing.JFrame {
         rss = im.Show();
         it.SetTable(jTable1, rss, namaKolom, jmlKolom, lebar);
     }//GEN-LAST:event_formWindowActivated
+
+    private void txtNilaiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNilaiKeyTyped
+        // TODO add your handling code here:
+        char karakter = evt.getKeyChar();
+
+        if (!(((karakter >= '0') && (karakter <= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE) || (karakter == KeyEvent.VK_ENTER)))) {
+            getToolkit().beep();
+            evt.consume();
+        } 
+    }//GEN-LAST:event_txtNilaiKeyTyped
 
     /**
      * @param args the command line arguments
