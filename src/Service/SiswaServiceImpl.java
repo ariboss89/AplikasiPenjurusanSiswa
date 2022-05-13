@@ -58,12 +58,12 @@ public class SiswaServiceImpl implements ISiswaService {
     }
 
     @Override
-    public void Save(String idSiswa, String nama, String alamat, String kontak, String minat) {
+    public void Save(String nis, String nisn, String idSiswa, String nama, String alamat, String kontak, String minat) {
         con = new Koneksi();
         con.connect();
         try {
             st = con.conn.createStatement();
-            query = "insert into tb_siswa(id, nama, alamat,kontak, minat)values('" + idSiswa + "', '" + nama + "','" + alamat + "','" + kontak + "','" + minat + "')";
+            query = "insert into tb_siswa(id, nama, alamat,kontak, minat, nis, nisn)values('" + idSiswa + "', '" + nama + "','" + alamat + "','" + kontak + "','" + minat + "')";
             st.executeUpdate(query);
             st.close();
             con.conn.close();
@@ -74,13 +74,13 @@ public class SiswaServiceImpl implements ISiswaService {
     }
 
     @Override
-    public void Update(String idSiswa, String nama, String alamat, String kontak, String minat) {
+    public void Update(String nis, String nisn, String idSiswa, String nama, String alamat, String kontak, String minat) {
 
         con = new Koneksi();
         con.connect();
         try {
             st = con.conn.createStatement();
-            query = "update tb_siswa SET nama='" + nama + "', alamat ='" + alamat + "', kontak='" + kontak + "', minat ='" + minat + "' where id = '" + idSiswa + "'";
+            query = "update tb_siswa SET nama='" + nama + "', alamat ='" + alamat + "', kontak='" + kontak + "', minat ='" + minat + "', nis ='" + nis + "', nisn ='" + nisn + "' where id = '" + idSiswa + "'";
             st.executeUpdate(query);
             st.close();
             con.conn.close();
@@ -126,21 +126,23 @@ public class SiswaServiceImpl implements ISiswaService {
             }
             query = "select *from tb_siswa";
             res = st.executeQuery(query);
-            data = new String[jumlahBaris][5];
+            data = new String[jumlahBaris][7];
             int r = 0;
             while (res.next()) {
-                data[r][0] = res.getString("id");
-                data[r][1] = res.getString("nama");
-                data[r][2] = res.getString("alamat");
-                data[r][3] = res.getString("kontak");
-                data[r][4] = res.getString("minat");
+                data[r][0] = res.getString("nis");
+                data[r][1] = res.getString("nisn");
+                data[r][2] = res.getString("id");
+                data[r][3] = res.getString("nama");
+                data[r][4] = res.getString("alamat");
+                data[r][5] = res.getString("kontak");
+                data[r][6] = res.getString("minat");
                 r++;
             }
             int jmlBaris = r;
             String[][] tmpArray = data;
-            data = new String[jmlBaris][5];
+            data = new String[jmlBaris][7];
             for (r = 0; r < jmlBaris; r++) {
-                for (int c = 0; c < 5; c++) {
+                for (int c = 0; c < 7; c++) {
                     data[r][c] = tmpArray[r][c];
                 }
             }

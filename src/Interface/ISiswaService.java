@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public interface ISiswaService{
     String IdSiswa();
-    void Save(String idSiswa, String nama, String alamat, String kontak, String minat);
-    void Update(String idSiswa, String nama, String alamat, String kontak, String minat);
+    void Save(String nis, String nisn, String idSiswa, String nama, String alamat, String kontak, String minat);
+    void Update(String nis, String nisn, String idSiswa, String nama, String alamat, String kontak, String minat);
     void Delete(String idSiswa);
     
     String[][] Show();

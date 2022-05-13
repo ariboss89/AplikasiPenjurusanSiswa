@@ -77,6 +77,10 @@ public class FormSiswa extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
         btnDelete1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        txtNis = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtNisn = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -172,7 +176,7 @@ public class FormSiswa extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -184,32 +188,39 @@ public class FormSiswa extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel6.setText("NIS");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel7.setText("NISN");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnSave)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnUpdate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnDelete))
-                            .addComponent(cbMinat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtKontak)
-                            .addComponent(txtAlamat)
-                            .addComponent(txtNama)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(btnDelete1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel4)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(btnSave)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnUpdate)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnDelete))
+                        .addComponent(cbMinat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtKontak)
+                        .addComponent(txtAlamat)
+                        .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDelete1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6)
+                    .addComponent(txtNis, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtNisn, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -218,9 +229,16 @@ public class FormSiswa extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNisn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -242,9 +260,9 @@ public class FormSiswa extends javax.swing.JFrame {
                             .addComponent(btnUpdate)
                             .addComponent(btnDelete))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnDelete1)
-                        .addGap(0, 15, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(btnDelete1))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -263,8 +281,15 @@ public class FormSiswa extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        
-        if(txtNama.getText().equals("")){
+        if(txtNis.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
+            txtNis.requestFocus();
+        }
+        else if(txtNisn.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
+            txtNisn.requestFocus();
+        }
+        else if(txtNama.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
             txtNama.requestFocus();
         }else if(txtAlamat.getText().equals("")){
@@ -284,8 +309,10 @@ public class FormSiswa extends javax.swing.JFrame {
             String alamat = txtAlamat.getText();
             String kontak = txtKontak.getText();
             String minat = cbMinat.getSelectedItem().toString();
+            String nis = txtNis.getText();
+            String nisn = txtNisn.getText();
             
-            is.Save(idSiswa, nama, alamat, kontak, minat);
+            is.Save(nis, nisn, idSiswa, nama, alamat, kontak, minat);
             
             Refresh();
         }   
@@ -295,11 +322,13 @@ public class FormSiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         int rowSelect = jTable1.getSelectedRow();
-        tbs.setId(jTable1.getValueAt(rowSelect, 0).toString());
-        txtNama.setText(jTable1.getValueAt(rowSelect, 1).toString());
-        txtAlamat.setText(jTable1.getValueAt(rowSelect, 2).toString()); 
-        txtKontak.setText(jTable1.getValueAt(rowSelect, 3).toString()); 
-        cbMinat.setSelectedItem(jTable1.getValueAt(rowSelect, 4).toString());
+        txtNis.setText(jTable1.getValueAt(rowSelect, 0).toString());
+        txtNisn.setText(jTable1.getValueAt(rowSelect, 1).toString());
+        tbs.setId(jTable1.getValueAt(rowSelect, 2).toString());
+        txtNama.setText(jTable1.getValueAt(rowSelect, 3).toString());
+        txtAlamat.setText(jTable1.getValueAt(rowSelect, 4).toString()); 
+        txtKontak.setText(jTable1.getValueAt(rowSelect, 5).toString()); 
+        cbMinat.setSelectedItem(jTable1.getValueAt(rowSelect, 6).toString());
         
         btnSave.setEnabled(false);
         btnUpdate.setEnabled(true);
@@ -308,7 +337,15 @@ public class FormSiswa extends javax.swing.JFrame {
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
-        if(txtNama.getText().equals("")){
+        if(txtNis.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
+            txtNis.requestFocus();
+        }
+        else if(txtNisn.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
+            txtNisn.requestFocus();
+        }
+        else if(txtNama.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !");
             txtNama.requestFocus();
         }else if(txtAlamat.getText().equals("")){
@@ -327,8 +364,10 @@ public class FormSiswa extends javax.swing.JFrame {
             String alamat = txtAlamat.getText();
             String kontak = txtKontak.getText();
             String minat = cbMinat.getSelectedItem().toString();
+            String nis = txtNis.getText();
+            String nisn = txtNisn.getText();
             
-            is.Update(idSiswa, nama, alamat, kontak, minat);
+            is.Update(nis, nisn, idSiswa, nama, alamat, kontak, minat);
             
             Refresh();
         }  
@@ -404,6 +443,8 @@ public class FormSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -411,6 +452,8 @@ public class FormSiswa extends javax.swing.JFrame {
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtKontak;
     private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtNis;
+    private javax.swing.JTextField txtNisn;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }
